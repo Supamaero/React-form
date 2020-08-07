@@ -2,6 +2,7 @@ import React from 'react';
 
 
 class Form extends React.Component {
+    userData;
     constructor(props) {
         super(props)
     
@@ -12,7 +13,7 @@ class Form extends React.Component {
             customer:"",
             number:""
              
-        }
+        }  
         this.nameChangeHandler = this.nameChangeHandler.bind(this);
         this.dateChangeHandler = this.dateChangeHandler.bind(this);
         this.emailChangeHandler = this.emailChangeHandler.bind(this);
@@ -61,8 +62,37 @@ class Form extends React.Component {
     submitHandleEvent(event){
         alert(`${this.state.name} ${this.state.number} ${this.state.customer} ${this.state.date} ${this.state.email}`);
         event.preventDefault();
-
     }
+
+
+    //React life cyle
+componentDidMount(){
+    this.userData=JSON.parse(localStorage.getItem("user"));
+    
+    if (localStorage.getItem("user")){
+        this.setState({
+            name:this.userData.name,
+            date:this.userData.date,
+            email:this.userData.email,
+            customer:this.userData.customer,
+            number:this.userData.number
+        })
+
+        }else{
+            this.setState({
+                name:"",
+                date:"",
+                email:"",
+                customer:"",
+                number:""
+            })
+    }
+
+}
+
+componentDidUpdate(nextProps, nextState){
+    localStorage.setItem("user",JSON.stringify(nextState))
+}
     render() {
         return (
             <div>
@@ -107,9 +137,7 @@ class Form extends React.Component {
             </div>
 
             <div className = "bottom"> 
-                  <button className="button_right" onClick={this.submit}>Cancel </button> 
-                 <button className="button_left">Save</button>
-
+                  <button className="button_right" onClick={this.submit}>Submit </button> 
              </div>
         </form>
                 

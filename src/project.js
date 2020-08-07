@@ -7,7 +7,6 @@ let Project = function(){
         <div className="project" >
             <Left/>
             <Right/>
-
         </div>
     );
 }

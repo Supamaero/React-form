@@ -1,13 +1,10 @@
 import React from 'react';
-
 import Form from './form';
 
 let Right = function (){
     return (
-        <div className="right"> 
+    <div className="right"> 
         <Form/>
-      
-
     </div>
     );
 }
