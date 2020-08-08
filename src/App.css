@@ -129,12 +129,9 @@ border:1px solid #d2d2d2;
 }
 
 .bottom{
-    /* background-color:red; */
     display:flex;
-    width:600px;
     justify-content:center;
-    align-items: center;
-   
+    align-items: center;  
 }
 
 .button_right{
@@ -170,15 +167,12 @@ border:1px solid #d2d2d2;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  border-radius: 5px;
-  
+  border-radius: 5px; 
 }
 
 
 .button_left:hover{
-
     background-color:#BCBDC2;
-  
 }
 
 
@@ -189,10 +183,9 @@ border:1px solid #d2d2d2;
         flex-direction:column;
     }
     .main{
-        background-color:red;
+        background-color:#fafafa;
         height:100vh;
         width:100%;
-        padding:20px;
         margin-bottom:0px;
     }
     
@@ -214,7 +207,7 @@ border:1px solid #d2d2d2;
 }
     .form{
         width:auto;
-        background-color: purple;
+        /* background-color: purple; */
     }
     
     .form_label{
@@ -233,7 +226,7 @@ border:1px solid #d2d2d2;
     input{
         margin-top:6px;
         border:none;
-        background:green;
+        background:#e2e2e2;
         font-size: 14px;
         margin-left:0;
         
