@@ -1,6 +1,6 @@
 import React from 'react';
 import Project from './project';
-import 'normalize.css';
+
 
 
 
